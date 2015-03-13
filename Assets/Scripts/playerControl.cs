@@ -37,7 +37,7 @@ public class playerControl : MonoBehaviour
 
     void moverDelante(float v)
     {
-        rigidbody2D.velocity = (Vector2)transform.TransformDirection(Vector3.up) * v;
+        GetComponent<Rigidbody2D>().velocity = (Vector2)transform.TransformDirection(Vector3.up) * v;
     }
     void girarBicho(float grados, int dir)
     {
