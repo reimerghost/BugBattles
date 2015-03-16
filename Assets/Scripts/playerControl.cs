@@ -9,28 +9,50 @@ public class playerControl : MonoBehaviour
 
     public Texture btnArriba, btnIzquierda, btnDerecha, btnDispara;
 
-    private Rect rArriba = new Rect(200, 200, 75, 75);
-    private Rect rDispara = new Rect(740, 400, 75, 75);
-    private Rect rIzquierda = new Rect(100, 100, 75, 75);
-    private Rect rDerecha = new Rect(120, 400, 75, 75);
+    private Rect rArriba = escalarGUI.ResizeGUI(new Rect(680, 410, 60, 60));
+    private Rect rIzquierda = escalarGUI.ResizeGUI(new Rect(30, 410, 60, 60));
+    private Rect rDerecha = escalarGUI.ResizeGUI(new Rect(110, 410, 60, 60));
+    private Rect rDispara = escalarGUI.ResizeGUI(new Rect(760, 410, 60, 60));
+
+    bool bArriba;
+    bool bIzquierda;
+    bool bDerecha;
+    bool bDispara;
 
     void OnGUI()
     {
+        bArriba = GUI.RepeatButton(rArriba, btnArriba); //Boton Adelante
+        bIzquierda = GUI.RepeatButton(rIzquierda, btnIzquierda); //Boton Izquierda
+        bDerecha = GUI.RepeatButton(rDerecha, btnDerecha); //Boton Derecha
+        bDispara = GUI.RepeatButton(rDispara, btnDispara); //Boton Dispara 
+
         if (Input.touchCount > 0)
             for (int i = 0; i < Input.touchCount; i++)
             {
-                GUI.Label(new Rect(0, (i*10), 100, 50), Input.GetTouch(i).position.ToString());
+                GUI.Label(new Rect(0, (i * 10), 100, 50), Input.GetTouch(i).position.ToString());
 
+                if (rArriba.Contains(Input.GetTouch(i).position))
+                {
+                    GUI.Label(new Rect(100, (i * 10), 100, 50), "ARRIBA");
+                    moverDelante();                }
                 if (rIzquierda.Contains(Input.GetTouch(i).position))
                 {
                     GUI.Label(new Rect(100, (i * 10), 100, 50), "IZQUIERDA");
                     girarBicho(1f);
                 }
-                if(rArriba.Contains(Input.GetTouch(i).position)){
-                    GUI.Label(new Rect(100, (i*10), 100, 50), "ARRIBA");
-                    moverDelante();
-                }                
+                if (rDerecha.Contains(Input.GetTouch(i).position))
+                {
+                    GUI.Label(new Rect(100, (i * 10), 100, 50), "DERECHA");
+                    girarBicho(-1f);
+                }
+                if (rDispara.Contains(Input.GetTouch(i).position))
+                {
+                    GUI.Label(new Rect(100, (i * 10), 100, 50), "DISPARANDO");
+                    //DISPARO
+                }
             }
+        
+
     }
 
 	// Use this for initialization
