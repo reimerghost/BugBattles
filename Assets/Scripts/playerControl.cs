@@ -9,10 +9,10 @@ public class playerControl : MonoBehaviour
 
     public Texture btnArriba, btnIzquierda, btnDerecha, btnDispara;
 
-    private Rect rArriba = escalarGUI.ResizeGUI(new Rect(680, 410, 60, 60));
-    private Rect rIzquierda = escalarGUI.ResizeGUI(new Rect(30, 410, 60, 60));
-    private Rect rDerecha = escalarGUI.ResizeGUI(new Rect(110, 410, 60, 60));
-    private Rect rDispara = escalarGUI.ResizeGUI(new Rect(760, 410, 60, 60));
+    private Rect rArriba = escalarGUI.ResizeGUI(new Rect(0, 0, 60, 60));
+    private Rect rIzquierda = escalarGUI.ResizeGUI(new Rect(30, 10, 60, 60));
+    private Rect rDerecha = escalarGUI.ResizeGUI(new Rect(110, 10, 60, 60));
+    private Rect rDispara = escalarGUI.ResizeGUI(new Rect(760, 10, 60, 60));
 
     bool bArriba;
     bool bIzquierda;
