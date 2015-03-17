@@ -12,11 +12,7 @@
 /*.userprefs
 /*.pidb
 /*.booproj
-/*.meta
+/*.unity.meta
 
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
-Assets/Scenes/escenarioJuego.unity.meta
-Assets/Scenes/instrucciones.unity.meta
-Assets/Scenes/menuElegir.unity.meta
-Assets/Scenes/escenarioJuego.unity.meta
