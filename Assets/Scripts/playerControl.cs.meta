@@ -1,8 +1,16 @@
 fileFormatVersion: 2
 guid: 8509ec7343d2025469bd8f402d6a14f1
+timeCreated: 1426565574
+licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - btnArriba: {fileID: 2800000, guid: fddf72604217b0b498426960225c219b, type: 3}
+  - btnIzquierda: {fileID: 2800000, guid: 3d304ecde335533488fd0de7b9b09ef9, type: 3}
+  - btnDerecha: {fileID: 2800000, guid: 1e96f3957cf44934dbfe2ef26d212a7a, type: 3}
+  - btnDispara: {fileID: 2800000, guid: 8d9c2aafc039b524d8b86c37fa73bc73, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

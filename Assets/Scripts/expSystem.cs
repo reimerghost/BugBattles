@@ -12,7 +12,7 @@ public class expSystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		expToLevelUp =(4 * (actualLvl*actualLvl*actualLvl)) / 5;
+		expToLevelUp = 100;
 	}
 	
 	// Update is called once per frame
@@ -20,7 +20,7 @@ public class expSystem : MonoBehaviour {
 		if(actualExp >= expToLevelUp){
 			actualLvl +=1;
 
-			expToLevelUp =(4 * (actualLvl*actualLvl*actualLvl)) / 5;
+			expToLevelUp +=(4 * (actualLvl*actualLvl*actualLvl)) / 5;
 		}
 	}
 
