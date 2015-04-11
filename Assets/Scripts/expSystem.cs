@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//YA NO SE USA
 public class expSystem : MonoBehaviour {
 
 	float actualExp,expToLevelUp, actualLvl=1;

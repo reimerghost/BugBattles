@@ -10,14 +10,11 @@ public class escalarGUI
     //Metodo para escalar la pantalla a diferentes tipos de pantallas.
     public static Rect ResizeGUI(Rect _rect)
     {
-
         //Nuevo Ancho
-        float FilScreenWidth = _rect.width / optimalHeight;
-        float rectWidth = FilScreenWidth * Screen.width;
+        float rectWidth = getAlto(_rect.width);
 
         //Nuevo Alto
-        float FilScreenHeight = _rect.height / optimalWidth;
-        float rectHeight = FilScreenHeight * Screen.height;
+        float rectHeight = getAncho(_rect.height);
 
         //Nueva posición
         float rectX = getPosX(_rect.x);
@@ -26,6 +23,7 @@ public class escalarGUI
         return new Rect(rectX, rectY, rectWidth, rectHeight);
     }
 
+    //POSICIONES
     public static float getPosX(float x)
     {
         return (x / optimalWidth) * Screen.width;
@@ -34,5 +32,18 @@ public class escalarGUI
     public static float getPosY(float y)
     {
         return ((y / optimalHeight) * Screen.height);
+    }
+
+    //TAMAÑOS
+    public static float getAncho(float w)
+    {
+        float FilScreenWidth = w / optimalHeight;
+        return (FilScreenWidth * Screen.width);
+    }
+
+    public static float getAlto(float h)
+    {
+        float FilScreenHeight = h / optimalWidth;
+        return (FilScreenHeight * Screen.height);
     }
 }
